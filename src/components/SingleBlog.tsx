@@ -4,7 +4,7 @@ import { SafeBlogs, SafeUser } from "@/types"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import {RiDeleteBin5Line} from 'react-icons/ri'
-import {BsFillPencilFill} from 'react-icons/Bs'
+import { GiPencil } from 'react-icons/gi'
 import axios from "axios"
 
 interface BlogProps {
@@ -52,7 +52,7 @@ const SingleBlog = ({key, data, currentUser}:BlogProps) => {
         {data.userId === currentUser?.id && (
           <div className="flex gap-2 justify-end">
               <RiDeleteBin5Line size={20} onClick={onDelete} className="cursor-pointer  text-black"/>
-              <BsFillPencilFill size={20} onClick={() => router.push(`/blogs/${data.id}`) } className="cursor-pointer  text-black"/>
+              <GiPencil size={20} onClick={() => router.push(`/blogs/${data.id}`) } className="cursor-pointer  text-black"/>
           </div>
         )}
       </div>
