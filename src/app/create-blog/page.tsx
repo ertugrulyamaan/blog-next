@@ -43,7 +43,7 @@ const page = () => {
         e.preventDefault()
         
         try {
-            axios.post('api/blogs', state)
+            axios.post('/api/blogs', state)
             .then(()=> {
                 router.push('/')
             })
